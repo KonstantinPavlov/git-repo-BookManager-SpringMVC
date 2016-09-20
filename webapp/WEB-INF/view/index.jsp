@@ -7,7 +7,7 @@
 
 <page:template>
 
-  <jsp:attribute name="title">Доброе пожаловать</jsp:attribute>
+  <jsp:attribute name="title">Book manager Spring MVC</jsp:attribute>
 
   <jsp:body>
 

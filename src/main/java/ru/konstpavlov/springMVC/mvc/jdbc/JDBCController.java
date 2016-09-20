@@ -38,6 +38,21 @@ public class JDBCController {
         return new ModelAndView("/jdbc/jdbc", "books", books);
     }
 
+    @RequestMapping(value = "/book/{id}", method = RequestMethod.GET)
+    public ModelAndView SelectBook(@PathVariable(value = "id") int id)
+    {
+        System.out.println("JDBCController jdbcSelectAllBooks() is called");
+        Book book = null;
+        try {
+            book = jdbcExample.getBook(id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return new ModelAndView("/jdbc/book", "book", book);
+    }
+
     @RequestMapping(value = "/jdbcDelete/book/{id}", method=RequestMethod.GET)
     public ModelAndView jdbcDelete( @PathVariable(value="id") int id) {
         System.out.println("JDBCController jdbcDelete is called");
@@ -59,6 +74,8 @@ public class JDBCController {
         }
         return new ModelAndView("/jdbc/jdbc", "books", books);
     }
+
+
 
 
 }

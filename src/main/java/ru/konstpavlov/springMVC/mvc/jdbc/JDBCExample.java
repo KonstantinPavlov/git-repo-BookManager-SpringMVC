@@ -72,8 +72,26 @@ public class JDBCExample {
     }
 
 
+    public Book getBook(int id) throws SQLException, ClassNotFoundException {
 
+        String prepStatText = "SELECT id,name,description,author FROM books WHERE id=?";
 
+        try (
+                Connection connection = getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(prepStatText))
+        {
+            preparedStatement.setInt(1,id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            Book book = new Book();
+            while (resultSet.next())
+            {
+                book.setId(resultSet.getInt("id"));
+                book.setName(resultSet.getString("name"));
+                book.setDescription(resultSet.getString("description"));
+                book.setAuthor(resultSet.getString("author"));
+            }
+            return book;
+        }
 
-
+    }
 }

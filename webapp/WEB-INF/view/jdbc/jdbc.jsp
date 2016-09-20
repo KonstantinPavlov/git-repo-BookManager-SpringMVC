@@ -25,7 +25,7 @@
                         <small>с использованием JDBC</small>
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a>
+                        <li><a href="index.html">На главную</a>
                         </li>
                         <li class="active">Коллекция книг</li>
                     </ol>
@@ -39,8 +39,8 @@
                 <div class="col-md-2">
 
                         <div class="list-group">
-                            <a href="index.html" class="list-group-item">Home</a>
-                            <a href="${jdbcQueryAllBooks}" class="list-group-item">Get all books</a>
+                            <a href="index.html" class="list-group-item">На главную</a>
+                            <a href="${jdbcQueryAllBooks}" class="list-group-item">Коллекция книг</a>
                             <a href="${jdbcDelete}/user/10" class="list-group-item">Delete some book</a>
                         </div>
 
@@ -53,18 +53,19 @@
                     <div class="col-md-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4><i class="fa fa-fw fa-check"></i><c:out value ="${book.name}"/></h4>
+                                <a href="/book/${book.id}"><h4><i class="fa fa-fw fa-check"></i><c:out value ="${book.name}"/></h4></a>
                             </div>
                             <div class="panel-body">
                                 <p><c:out value="Автор: ${book.author}"/></p>
-                                <a href="/jdbcDelete/book/${book.id}" class="btn btn-default">Удалить книгу</a>
+                                <a href="/book/${book.id}" class="btn btn-default">Просмотреть</a>
+                                <a href="/jdbcDelete/book/${book.id}" class="btn btn-default">Удалить</a>
                             </div>
                          </div>
                     </div>
                             </c:forEach>
                     </c:if>
                     <c:if test="${empty books}">
-                    <p><em>В коллекцию не добавлено ни одной книги</em></p>
+                    <p><em>В коллекцию не добавлено ни одной книги, Добавьте книгу</em></p>
                     </c:if>
                 </div>
 

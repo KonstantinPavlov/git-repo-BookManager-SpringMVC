@@ -53,6 +53,7 @@
             <div class="row">
                 <!-- Related Projects Row -->
                 <div class="col-md-8">
+                    <c:if test="${not empty message}">
                     <div class="well">
                         <div class="row">
                             <div class="col-md-12">
@@ -60,6 +61,7 @@
                             </div>
                         </div>
                     </div>
+                    </c:if>
                     <h2>Внесите данные о книге:</h2>
                     <form:form name="addNewBook" id="addNewForm" action="/add"
                                method="post" modelAttribute="book" novalidate="true" accept-charset="UTF-8" enctype="multipart/form-data" >
@@ -112,10 +114,10 @@
 
 
         <!-- jQuery -->
-        <script src="js/jquery.js"></script>
+        <script src="resources/js/jquery.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="resources/js/bootstrap.min.js"></script>
     </jsp:body>
 
 </page:template>

@@ -49,7 +49,7 @@ public class JDBCController {
         return new ModelAndView("/jdbc/jdbc", "books", books);
     }
 
-    @RequestMapping(value = "/addNew?message={message}", method = RequestMethod.GET)
+    @RequestMapping(value = "/addNew", method = RequestMethod.GET)
     public ModelAndView addNewBook(@PathVariable(value = "message")String message) {
         return new ModelAndView("/jdbc/addNew", "message", message);
     }
@@ -103,7 +103,7 @@ public class JDBCController {
             e.printStackTrace();
         }
 
-        return new ModelAndView("redirect:/addNew.html", "message",message );
+        return new ModelAndView("/jdbc/addNew", "message",message );
     }
 
 

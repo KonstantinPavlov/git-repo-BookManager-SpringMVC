@@ -61,12 +61,25 @@
 <!-- Page Content -->
 <div class="container">
 
+  <!-- Portfolio Section -->
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Добро пожаловать в Book Manager Spring MVC Project</h1>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <a href="/jdbcQueryAllBooks">
+        <img class="img-responsive img-portfolio img-hover" src='${pageContext.request.contextPath}/resources/images/books.png' alt="">
+      </a>
+    </div>
+  </div>
+  <!-- /.row -->
+
   <!-- Marketing Icons Section -->
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="page-header">
-        Добро пожаловать в Book Manager Spring MVC Project
-      </h1>
+      <h2 class="page-header">
+        Использованные технологии
+      </h2>
     </div>
     <div class="col-md-4">
       <div class="panel panel-default">
@@ -106,43 +119,7 @@
   </div>
   <!-- /.row -->
 
-  <!-- Portfolio Section -->
-  <div class="row">
-    <div class="col-lg-12">
-      <h2 class="page-header">Portfolio Heading</h2>
-    </div>
-    <div class="col-md-4 col-sm-6">
-      <a href="portfolio-item.html">
-        <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-      </a>
-    </div>
-    <div class="col-md-4 col-sm-6">
-      <a href="portfolio-item.html">
-        <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-      </a>
-    </div>
-    <div class="col-md-4 col-sm-6">
-      <a href="portfolio-item.html">
-        <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-      </a>
-    </div>
-    <div class="col-md-4 col-sm-6">
-      <a href="portfolio-item.html">
-        <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-      </a>
-    </div>
-    <div class="col-md-4 col-sm-6">
-      <a href="portfolio-item.html">
-        <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-      </a>
-    </div>
-    <div class="col-md-4 col-sm-6">
-      <a href="portfolio-item.html">
-        <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-      </a>
-    </div>
-  </div>
-  <!-- /.row -->
+
 
   <!-- Features Section -->
   <div class="row">

@@ -21,7 +21,7 @@
                         <small>pdf или excel</small>
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a>
+                        <li><a href="/index.html">Home</a>
                         </li>
                         <li class="active">Пример загрузки файла</li>
                     </ol>

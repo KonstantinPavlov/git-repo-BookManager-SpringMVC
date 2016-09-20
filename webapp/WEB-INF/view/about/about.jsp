@@ -62,7 +62,7 @@
                 </div>
                 <div class="col-md-4 text-center">
                     <div class="thumbnail">
-                        <img class="img-responsive" src='${pageContext.request.contextPath}/resources/images/Boss-3-icon.png' alt="">
+                        <img class="img-responsive" src='${pageContext.request.contextPath}/resources/images/developer.png' alt="">
                         <div class="caption">
                             <h3>Konstantin Pavlov<br>
                                 <small>Разработчик</small>

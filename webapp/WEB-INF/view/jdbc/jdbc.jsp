@@ -40,9 +40,8 @@
 
                         <div class="list-group">
                             <a href="../index.html" class="list-group-item">На главную</a>
-                            <a href="${jdbcQueryAllBooks}" class="list-group-item">Коллекция книг</a>
-                            <a href="/addNew.html" class="list-group-item">Добавить книгу</a>
-                            <a href="${jdbcDelete}/user/10" class="list-group-item">Delete some book</a>
+                            <a href="${jdbcQueryAllBooks}" class="list-group-item active">Коллекция книг</a>
+                            <a href="/addNew.html" class="list-group-item"><img src="/resources/images/add.png" width="20" height="20"> Добавить книгу</a>
                         </div>
 
                 </div>

@@ -12,12 +12,15 @@
 
     <jsp:body>
 
+        <c:url value="/jdbcSelectAllBooks" var="jdbcQueryAllBooks" />
+        <c:url value="/jdbcDelete" var="jdbcDelete" />
+
         <!-- Page Content -->
         <div class="container">
 
             <!-- Page Heading/Breadcrumbs -->
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-push-12">
                     <h1 class="page-header">Добавление новой книги
                         <small></small>
                     </h1>
@@ -32,17 +35,32 @@
             </div>
             <!-- /.row -->
 
-            <c:if test="${not empty message}">
-                <div class="col-lg-2">
-                    <c:out value="${message}"/>
+            <div class="row">
+                <!-- Sidebar Column-->
+                <div class="col-md-2">
+
+                    <div class="list-group">
+                        <a href="../index.html" class="list-group-item">На главную</a>
+                        <a href="${jdbcQueryAllBooks}" class="list-group-item">Коллекция книг</a>
+                        <a href="/addNew.html" class="list-group-item active"><img src="/resources/images/add.png" width="20" height="20"> Добавить книгу</a>
+                    </div>
+
                 </div>
-            </c:if>
+
+
 
             <!-- BOOK Item Row -->
             <div class="row">
                 <!-- Related Projects Row -->
                 <div class="col-md-8">
-                    <h3>Внесите данные о книге:</h3>
+                    <div class="well">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p><c:out value="${message}"/></p>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Внесите данные о книге:</h2>
                     <form:form name="addNewBook" id="addNewForm" action="/add"
                                method="post" modelAttribute="book" novalidate="true" accept-charset="UTF-8" enctype="multipart/form-data" >
 
@@ -83,7 +101,7 @@
 
                     </form:form>
                 </div>
-
+            </div>
 
             </div>
 

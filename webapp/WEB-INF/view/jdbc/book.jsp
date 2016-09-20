@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">${book.name}
-                        <small>${book.author}</small>
+                        <small>${book.author}</small> <img src="/resources/images/edit.png" width="30" height="30">
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="../index.html">На главную</a>

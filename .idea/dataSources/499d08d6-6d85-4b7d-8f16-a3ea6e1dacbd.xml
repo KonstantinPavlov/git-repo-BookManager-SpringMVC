@@ -19,11 +19,11 @@
     </column>
     <column id="12" parent="9" name="name">
       <mandatory>1</mandatory>
-      <data-type>varchar(50)|0</data-type>
+      <data-type>varchar(200)|0</data-type>
     </column>
     <column id="13" parent="9" name="description">
       <mandatory>1</mandatory>
-      <data-type>varchar(300)|0</data-type>
+      <data-type>varchar(1000)|0</data-type>
     </column>
     <column id="14" parent="9" name="author">
       <data-type>varchar(50)|0</data-type>

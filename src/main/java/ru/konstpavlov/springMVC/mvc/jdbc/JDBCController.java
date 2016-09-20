@@ -49,9 +49,9 @@ public class JDBCController {
         return new ModelAndView("/jdbc/jdbc", "books", books);
     }
 
-    @RequestMapping(value = "/addNew", method = RequestMethod.GET)
-    public ModelAndView addNewBook() {
-        return new ModelAndView("/jdbc/addNew", "", "");
+    @RequestMapping(value = "/addNew?message={message}", method = RequestMethod.GET)
+    public ModelAndView addNewBook(@PathVariable(value = "message")String message) {
+        return new ModelAndView("/jdbc/addNew", "message", message);
     }
 
     @RequestMapping(value = "/add",method = RequestMethod.POST)

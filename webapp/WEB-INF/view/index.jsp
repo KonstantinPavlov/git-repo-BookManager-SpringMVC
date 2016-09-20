@@ -15,10 +15,10 @@
 <header id="myCarousel" class="carousel slide">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-    <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
+
   </ol>
 
   <!-- Wrapper for slides -->
@@ -37,12 +37,6 @@
     </div>
     <div class="item">
       <div class="fill" style="background-image:url('${pageContext.request.contextPath}/resources/images/mysql-backup.jpg');"></div>
-      <div class="carousel-caption">
-        <h2></h2>
-      </div>
-    </div>
-    <div class="item">
-      <div class="fill" style="background-image:url('${pageContext.request.contextPath}/resources/images/hibernate.png');"></div>
       <div class="carousel-caption">
         <h2></h2>
       </div>

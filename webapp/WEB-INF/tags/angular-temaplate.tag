@@ -54,8 +54,6 @@
     <footer>
         <div class="row">
             <div class="col-lg-12">
-                <a href="<%=request.getContextPath()%>?languageVar=en">EN</a>
-                <a href="<%=request.getContextPath()%>?languageVar=ru">RU</a>
                 <p>Copyright © Konstantin Pavlov 2016</p>
             </div>
         </div>

@@ -3,102 +3,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="page" tagdir="/WEB-INF/tags" %>
 
-<html>
-<head>
-  <title>Book namager Spring MVCr</title>
-  <spring:url value="resources/css/bootstrap.css" var="bootstrap"/>
-  <spring:url value="/resources/css/modern-business.css" var="startertemplate"/>
-  <link href="${bootstrap}" rel="stylesheet" />
-  <link href="${startertemplate}" rel="stylesheet" />
-</head>
-<body>
+<page:template>
 
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Book Manager Spring MVC Project</a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="about.html">About</a>
-        </li>
-        <li>
-          <a href="services.html">Lessons</a>
-        </li>
-        <li>
-          <a href="contact.html">Contact</a>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial<b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li>
-              <a href="portfolio-1-col.html">Lesson 1</a>
-            </li>
-            <li>
-              <a href="portfolio-2-col.html">Lesson 2</a>
-            </li>
-            <li>
-              <a href="portfolio-3-col.html">Lesson 3</a>
-            </li>
-            <li>
-              <a href="portfolio-4-col.html">Lesson 5</a>
-            </li>
-            <li>
-              <a href="portfolio-item.html">Lesson 5</a>
-            </li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li>
-              <a href="blog-home-1.html">Blog Home 1</a>
-            </li>
-            <li>
-              <a href="blog-home-2.html">Blog Home 2</a>
-            </li>
-            <li>
-              <a href="blog-post.html">Blog Post</a>
-            </li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Other Pages <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li>
-              <a href="full-width.html">Full Width Page</a>
-            </li>
-            <li>
-              <a href="sidebar.html">Sidebar Page</a>
-            </li>
-            <li>
-              <a href="faq.html">FAQ</a>
-            </li>
-            <li>
-              <a href="404.html">404</a>
-            </li>
-            <li>
-              <a href="pricing.html">Pricing Table</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container -->
-</nav>
+  <jsp:attribute name="title">Доброе пожаловать</jsp:attribute>
+
+  <jsp:body>
 
 <!-- Header Carousel -->
 <header id="myCarousel" class="carousel slide">
@@ -107,6 +18,7 @@
     <li data-target="#myCarousel" data-slide-to="0" class=""></li>
     <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -118,13 +30,19 @@
       </div>
     </div>
     <div class="item active">
-      <div class="fill" style="background-image:url('${pageContext.request.contextPath}/resources/images/Spring.png');"></div>
+      <div class="fill" style="background-image:url('${pageContext.request.contextPath}/resources/images/spring.jpg');"></div>
       <div class="carousel-caption">
         <h2></h2>
       </div>
     </div>
     <div class="item">
       <div class="fill" style="background-image:url('${pageContext.request.contextPath}/resources/images/mysql-backup.jpg');"></div>
+      <div class="carousel-caption">
+        <h2></h2>
+      </div>
+    </div>
+    <div class="item">
+      <div class="fill" style="background-image:url('${pageContext.request.contextPath}/resources/images/hibernate.png');"></div>
       <div class="carousel-caption">
         <h2></h2>
       </div>
@@ -266,14 +184,6 @@
 
   <hr>
 
-  <!-- Footer -->
-  <footer>
-    <div class="row">
-      <div class="col-lg-12">
-        <p>Copyright © Konstantin Pavlov 2016</p>
-      </div>
-    </div>
-  </footer>
 
 </div>
 <!-- /.container -->
@@ -292,7 +202,6 @@
 </script>
 
 
+  </jsp:body>
 
-
-</body>
-</html>
+</page:template>

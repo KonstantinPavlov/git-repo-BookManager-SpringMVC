@@ -21,9 +21,9 @@
                         <small>${book.author}</small>
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="index.html">На главную</a>
+                        <li><a href="../index.html">На главную</a>
                         </li>
-                        <li><a href="/jdbcQueryAllBooks">Коллекция книг</a>
+                        <li><a href="/jdbcSelectAllBooks">Коллекция книг</a>
                         </li>
                         <li class="active">${book.name}</li>
                     </ol>
@@ -36,7 +36,7 @@
                 <!-- Related Projects Row -->
                     <div class="row">
                         <div class="col-md-6">
-                                <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
+                                <img class="img-responsive img-hover img-related" src="${book.image}" alt="">
                         </div>
 
                         <div class="col-md-6">

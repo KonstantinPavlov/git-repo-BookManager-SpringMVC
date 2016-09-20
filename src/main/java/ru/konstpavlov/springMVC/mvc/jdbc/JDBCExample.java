@@ -65,6 +65,12 @@ public class JDBCExample {
     public void deleteBOOK(int id) throws SQLException, ClassNotFoundException {
 
         try(Connection connection = getConnection();
+            PreparedStatement preparedStatement= connection.prepareStatement("DELETE FROM images WHERE book_id=?");)
+        {
+            preparedStatement.setInt(1,id);
+            preparedStatement.executeUpdate();}
+
+        try(Connection connection = getConnection();
             PreparedStatement preparedStatement= connection.prepareStatement("DELETE FROM books WHERE id=?");)
         {
             preparedStatement.setInt(1,id);
@@ -74,7 +80,7 @@ public class JDBCExample {
 
     public Book getBook(int id) throws SQLException, ClassNotFoundException {
 
-        String prepStatText = "SELECT id,name,description,author FROM books WHERE id=?";
+        String prepStatText = "SELECT books.id,books.name,books.description,books.author,images.image FROM  books LEFT OUTER JOIN  images ON books.id = images.book_id WHERE books.id=?";
 
         try (
                 Connection connection = getConnection();
@@ -85,13 +91,41 @@ public class JDBCExample {
             Book book = new Book();
             while (resultSet.next())
             {
-                book.setId(resultSet.getInt("id"));
-                book.setName(resultSet.getString("name"));
-                book.setDescription(resultSet.getString("description"));
-                book.setAuthor(resultSet.getString("author"));
+                book.setId(resultSet.getInt("books.id"));
+                book.setName(resultSet.getString("books.name"));
+                book.setDescription(resultSet.getString("books.description"));
+                book.setAuthor(resultSet.getString("books.author"));
+                book.setImage("\\resources\\uploadFiles\\"+resultSet.getString("images.image"));
             }
             return book;
         }
 
+    }
+
+    public void addBook(Book book,String fileName) throws SQLException, ClassNotFoundException {
+
+        try (
+                Connection connection = getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO books (name,author,description) VALUES (?,?,?);");
+        )
+        {
+            preparedStatement.setString(1,book.getName());
+            preparedStatement.setString(2,book.getAuthor());
+            preparedStatement.setString(3,book.getDescription());
+            preparedStatement.executeUpdate();
+        }
+
+        if (fileName!=null) {
+            try (
+                    Connection connection = getConnection();
+                    PreparedStatement preparedStatement2 = connection.prepareStatement("INSERT INTO images (image,book_id) VALUE (?,( SELECT id FROM books WHERE name=? AND author=? AND description=?))");
+            ) {
+                preparedStatement2.setString(1, fileName);
+                preparedStatement2.setString(2, book.getName());
+                preparedStatement2.setString(3, book.getAuthor());
+                preparedStatement2.setString(4, book.getDescription());
+                preparedStatement2.executeUpdate();
+            }
+        }
     }
 }

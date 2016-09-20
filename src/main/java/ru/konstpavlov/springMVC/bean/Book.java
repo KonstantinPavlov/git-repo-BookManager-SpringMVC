@@ -1,5 +1,9 @@
 package ru.konstpavlov.springMVC.bean;
 
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.File;
+
 /**
  * Created by Konstantin on 20.09.2016.
  */
@@ -9,6 +13,25 @@ public class Book {
     private String name;
     private String description;
     private String author;
+    private String image;
+    private MultipartFile multipartFile;
+
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public MultipartFile getMultipartFile() {
+        return multipartFile;
+    }
+
+    public void setMultipartFile(MultipartFile multipartFile) {
+        this.multipartFile = multipartFile;
+    }
 
     public Book(){}
 

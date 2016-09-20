@@ -67,7 +67,7 @@
       <h1 class="page-header">Добро пожаловать в Book Manager Spring MVC Project</h1>
     </div>
     <div class="col-md-4 col-sm-6">
-      <a href="/jdbcQueryAllBooks">
+      <a href="/jdbcSelectAllBooks">
         <img class="img-responsive img-portfolio img-hover" src='${pageContext.request.contextPath}/resources/images/books.png' alt="">
       </a>
     </div>

@@ -11,7 +11,7 @@
 
     <jsp:body>
 
-        <c:url value="/jdbcQueryAllBooks" var="jdbcQueryAllBooks" />
+        <c:url value="/jdbcSelectAllBooks" var="jdbcQueryAllBooks" />
         <c:url value="/jdbcDelete" var="jdbcDelete" />
 
 
@@ -25,7 +25,7 @@
                         <small>с использованием JDBC</small>
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="index.html">На главную</a>
+                        <li><a href="../index.html">На главную</a>
                         </li>
                         <li class="active">Коллекция книг</li>
                     </ol>
@@ -39,8 +39,9 @@
                 <div class="col-md-2">
 
                         <div class="list-group">
-                            <a href="index.html" class="list-group-item">На главную</a>
+                            <a href="../index.html" class="list-group-item">На главную</a>
                             <a href="${jdbcQueryAllBooks}" class="list-group-item">Коллекция книг</a>
+                            <a href="/addNew.html" class="list-group-item">Добавить книгу</a>
                             <a href="${jdbcDelete}/user/10" class="list-group-item">Delete some book</a>
                         </div>
 
@@ -58,7 +59,7 @@
                             <div class="panel-body">
                                 <p><c:out value="Автор: ${book.author}"/></p>
                                 <a href="/book/${book.id}" class="btn btn-default">Просмотреть</a>
-                                <a href="/jdbcDelete/book/${book.id}" class="btn btn-default">Удалить</a>
+                                <a href="/jdbcDelete/${book.id}" class="btn btn-default">Удалить</a>
                             </div>
                          </div>
                     </div>

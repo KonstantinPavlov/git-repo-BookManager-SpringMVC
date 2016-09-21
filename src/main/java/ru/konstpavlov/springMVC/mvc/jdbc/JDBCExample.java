@@ -38,15 +38,26 @@ public class JDBCExample {
     }
 
     //JDBC TEMPLATE queryALL EXAMPLE
-    public List<Book> queryAllBooks() throws SQLException, ClassNotFoundException {
+    public List<Book> queryAllBooks(String text) throws SQLException, ClassNotFoundException {
         System.out.println("JDBCExample: queryAllBooks is called");
-
-        String prepStatText = "SELECT id,name,description,author FROM books";
+        String prepStatText ="";
+        boolean hasParameter=false;
+        if (text!=null){
+            hasParameter=true;
+            prepStatText = "SELECT id,name,description,author FROM books WHERE name LIKE ? OR author LIKE ?";
+        }
+        else
+         prepStatText = "SELECT id,name,description,author FROM books";
 
         try (
                 Connection connection = getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(prepStatText))
         {
+            if (hasParameter)
+            {
+                preparedStatement.setString(1,"%"+text+"%");
+                preparedStatement.setString(2,"%"+text+"%");
+            }
             ResultSet resultSet = preparedStatement.executeQuery();
             List<Book> books = new ArrayList<>();
             while (resultSet.next())

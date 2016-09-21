@@ -3,16 +3,14 @@ package ru.konstpavlov.springMVC.mvc.jdbc;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import ru.konstpavlov.springMVC.bean.Book;
 import ru.konstpavlov.springMVC.mvc.file.FileUploadController;
 
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.sql.SQLException;
 import java.util.List;
@@ -36,17 +34,23 @@ public class JDBCController {
     ServletContext servletContext;
 
     @RequestMapping(value = "/jdbcSelectAllBooks", method = RequestMethod.GET)
-    public ModelAndView jdbcSelectAllBooks() {
+
+    public ModelAndView jdbcSelectAllBooks(HttpServletRequest request ) {
+
+        String searchText = request.getParameter("searchText");
         System.out.println("JDBCController jdbcSelectAllBooks() is called");
         List<Book> books = null;
         try {
-            books = jdbcExample.queryAllBooks();
+            books = jdbcExample.queryAllBooks(searchText);
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return new ModelAndView("/jdbc/jdbc", "books", books);
+        ModelAndView md = new ModelAndView("/jdbc/jdbc");
+        md.addObject("books",books);
+        md.addObject("searchText",searchText);
+        return md;
     }
 
     @RequestMapping(value = "/addNew", method = RequestMethod.GET)
@@ -178,7 +182,7 @@ public class JDBCController {
 
         List<Book> books = null;
         try {
-            books = jdbcExample.queryAllBooks();
+            books = jdbcExample.queryAllBooks(null);
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

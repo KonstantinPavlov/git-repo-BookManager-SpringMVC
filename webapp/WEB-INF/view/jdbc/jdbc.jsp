@@ -44,9 +44,24 @@
                             <a href="/addNew.html" class="list-group-item"><img src="/resources/images/add.png" width="20" height="20"> Добавить книгу</a>
                         </div>
 
+                        <!--Search field -->
+                        <form action="${jdbcQueryAllBooks}" method="get">
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <input type="text" class="form-control" id="searchText" name="searchText" value="${searchText}"
+                                           data-validation-required-message="Введите строку поиска книги."  >
+                                    <p class="help-block"></p>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Поиск</button>
+                            </div>
+                        </form>
+
+
                 </div>
                 <!-- Content Column -->
                 <div class="col-md-10">
+
+                    <!--Search field -->
                     <c:if test="${not empty books}">
                         <!--Если коллекция книг не пустая то выводим  книги-->
                         <c:forEach items="${books}" var="book">

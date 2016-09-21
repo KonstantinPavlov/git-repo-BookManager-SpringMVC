@@ -37,7 +37,7 @@
                 <div class="col-md-6">
                     <h3>О проекте Book Manager Spring MVC Project</h3>
                     <p>Проект создается по мотивам задания для собеседования на должность стажера Java в компанию <a href="http://www.masterdata.ru/">MASTERDATA</a> . Было принято решение переделать существующий проект на фреймворк Spring MVC. Вот ссылка на репозиторий прошлого проекта на <a href="https://github.com/KonstantinPavlov/git-repo-BookManager">github.com</a></p>
-                    <p>В процессе поиска информации наткнулся на ресурс: <a href="http://javastudy.ru/spring-mvc/review-mvc-angularjs-bootstrap-html5/">http://javastudy.ru/</a> с материалами по  данному фреймворку. Один из циклов стетей лег в основу проекта. </p>
+                    <p>В процессе поиска информации наткнулся на ресурс: <a href="http://javastudy.ru/spring-mvc/review-mvc-angularjs-bootstrap-html5/">http://javastudy.ru/</a> с материалами по  данному фреймворку. Один из циклов статей лег в основу проекта. </p>
                     <p>Текст задания:
                         <br>Создать электронную библиотеку с простейшим web-интерфейсом, позволяющим:
                         <ul>

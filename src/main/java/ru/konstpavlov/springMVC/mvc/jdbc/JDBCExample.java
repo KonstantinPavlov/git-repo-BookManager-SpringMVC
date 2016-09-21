@@ -128,4 +128,32 @@ public class JDBCExample {
             }
         }
     }
+
+
+    public void updateBook(Book book,String fileName) throws SQLException, ClassNotFoundException {
+
+        try (
+                Connection connection = getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement("UPDATE books SET name = ?, author=?,description=?  WHERE id=?");
+
+        )
+        {
+            preparedStatement.setString(1,book.getName());
+            preparedStatement.setString(2,book.getAuthor());
+            preparedStatement.setString(3,book.getDescription());
+            preparedStatement.setInt(4,book.getId());
+            preparedStatement.executeUpdate();
+        }
+
+        if (fileName!=null) {
+            try (
+                    Connection connection = getConnection();
+                    PreparedStatement preparedStatement2 = connection.prepareStatement("UPDATE images SET image = ? WHERE book_id=?");
+            ) {
+                preparedStatement2.setString(1, fileName);
+                preparedStatement2.setInt(2, book.getId());
+                preparedStatement2.executeUpdate();
+            }
+        }
+    }
 }

@@ -12,23 +12,23 @@
     <title><jsp:invoke fragment="title"/></title>
 
     <!-- Bootstrap Core CSS -->
-    <spring:url value="/resources/css/bootstrap.css" var="bootstrap"/>
+    <spring:url value="../resources/css/bootstrap.css" var="bootstrap"/>
     <link href="${bootstrap}" rel="stylesheet" />
 
     <!-- Custom CSS -->
-    <spring:url value="/resources/css/modern-business.css" var="startertemplate"/>
+    <spring:url value="../resources/css/modern-business.css" var="startertemplate"/>
     <link href="${startertemplate}" rel="stylesheet" />
 
     <!-- Custom Fonts -->
-    <spring:url value="/resources/font-awesome/css/font-awesome.min.css" var="fontawesome"/>
+    <spring:url value="../resources/font-awesome/css/font-awesome.min.css" var="fontawesome"/>
     <link href="${fontawesome}" rel="stylesheet" />
 
     <!-- jQuery -->
-    <spring:url value="/resources/js/jquery-2.1.4.min.js" var="jqueryjs"/>
+    <spring:url value="../resources/js/jquery.js" var="jqueryjs"/>
     <script src="${jqueryjs}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <spring:url value="/resources/js/bootstrap.min.js" var="js"/>
+    <spring:url value="../resources/js/bootstrap.min.js" var="js"/>
     <script src="${js}"></script>
 </head>
 

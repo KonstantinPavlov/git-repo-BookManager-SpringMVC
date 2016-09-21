@@ -52,5 +52,6 @@
     <mvc:view-controller path="/jdbc.html" view-name="/jdbc/jdbc"/>
     <mvc:view-controller path="/book.html" view-name="/jdbc/book"/>
     <mvc:view-controller path="/addNew.html" view-name="/jdbc/addNew"/>
+    <mvc:view-controller path="/edit.html" view-name="/jdbc/edit"/>
 
 </beans>

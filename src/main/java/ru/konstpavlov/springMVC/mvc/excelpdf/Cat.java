@@ -1,5 +1,7 @@
 package ru.konstpavlov.springMVC.mvc.excelpdf;
 
+import java.io.BufferedReader;
+
 /**
  * Created by Konstantin on 19.09.2016.
  */
@@ -8,6 +10,7 @@ public class Cat {
     private String name;
     private String color;
     private int weight;
+
 
 
     public Cat(String name, String color, int weight) {

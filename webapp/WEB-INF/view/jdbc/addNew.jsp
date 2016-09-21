@@ -20,7 +20,7 @@
 
             <!-- Page Heading/Breadcrumbs -->
             <div class="row">
-                <div class="col-lg-push-12">
+                <div class="col-lg-12">
                     <h1 class="page-header">Добавление новой книги
                         <small></small>
                     </h1>
@@ -47,8 +47,6 @@
 
                 </div>
 
-
-
             <!-- BOOK Item Row -->
             <div class="row">
                 <!-- Related Projects Row -->
@@ -70,7 +68,7 @@
                             <div class="controls">
                                 <label>Название книги:</label>
                                 <input type="text" class="form-control" id="name" name="name"
-                                       required data-validation-required-message="Внесите название книги." >
+                                       required="required" data-validation-required-message="Внесите название книги." >
                                 <p class="help-block"></p>
                             </div>
                         </div>
@@ -79,7 +77,7 @@
                             <div class="controls">
                                 <label>Автор:</label>
                                 <input type="text" class="form-control" id="author" name="author"
-                                       required data-validation-required-message="Введите автора.">
+                                       required="required" data-validation-required-message="Введите автора.">
                                 <p class="help-block"></p>
                             </div>
                         </div>
@@ -88,7 +86,7 @@
                             <div class="controls">
                                 <label>Описание книги:</label>
                                 <textarea rows="10" cols="100" class="form-control" id="description" name="description"
-                                          required data-validation-required-message="Введите описание книги" maxlength="999" style="resize:none"></textarea>
+                                          required="required" data-validation-required-message="Введите описание книги" maxlength="999" style="resize:none"></textarea>
                             </div>
 
                             <div class="controls">
@@ -109,15 +107,11 @@
 
         </div>
 
-
-
-
-
         <!-- jQuery -->
-        <script src="resources/js/jquery.js"></script>
+        <script src="../resources/js/jquery.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="resources/js/bootstrap.min.js"></script>
+        <script src="../resources/js/bootstrap.min.js"></script>
     </jsp:body>
 
 </page:template>

@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">${book.name}
-                        <small>${book.author}</small> <img src="/resources/images/edit.png" width="30" height="30">
+                        <small>${book.author} <a href="/edit/${book.id}"><img src="/resources/images/edit.png" width="30" height="30"></a></small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="../index.html">На главную</a>
@@ -56,10 +56,10 @@
         <!-- /.container -->
 
         <!-- jQuery -->
-        <script src="resources/js/jquery.js"></script>
+        <script src="../resources/js/jquery.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="resources/js/bootstrap.min.js"></script>
+        <script src="../resources/js/bootstrap.min.js"></script>
     </jsp:body>
 
 </page:template>

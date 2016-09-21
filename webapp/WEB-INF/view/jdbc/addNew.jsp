@@ -33,6 +33,7 @@
                     </ol>
                 </div>
             </div>
+
             <!-- /.row -->
 
             <div class="row">
@@ -104,8 +105,10 @@
             </div>
 
             </div>
+            <hr>
 
         </div>
+
 
         <!-- jQuery -->
         <script src="../resources/js/jquery.js"></script>

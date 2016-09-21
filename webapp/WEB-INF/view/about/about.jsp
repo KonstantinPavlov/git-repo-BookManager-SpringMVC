@@ -21,7 +21,7 @@
                         <small>Основные цели</small>
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a>
+                        <li><a href="index.html">На главную</a>
                         </li>
                         <li class="active">О проекте</li>
                     </ol>
@@ -36,9 +36,9 @@
                 </div>
                 <div class="col-md-6">
                     <h3>О проекте Book Manager Spring MVC Project</h3>
-                    <p>Проект создается по мотивам задания для собеседования на должность стажера Java в компанию <a href="http://www.masterdata.ru/">MASTERDATA</a> . Было принято решение переделать существующий проект на фреймворк Spring MVC. Вот кстати ссылка на репозиторий прошлого проекта на <a href="https://github.com/KonstantinPavlov/git-repo-BookManager">github.com</a></p>
-                    <p>В процессе поиска информации наткнулся на курс: <a href="http://javastudy.ru/spring-mvc/review-mvc-angularjs-bootstrap-html5/">http://javastudy.ru/</a> по данному фреймворку. Этот цикл заданий и лег в основу проекта. </p>
-                    <p>В общем то текст задания звучит следующим образом:
+                    <p>Проект создается по мотивам задания для собеседования на должность стажера Java в компанию <a href="http://www.masterdata.ru/">MASTERDATA</a> . Было принято решение переделать существующий проект на фреймворк Spring MVC. Вот ссылка на репозиторий прошлого проекта на <a href="https://github.com/KonstantinPavlov/git-repo-BookManager">github.com</a></p>
+                    <p>В процессе поиска информации наткнулся на ресурс: <a href="http://javastudy.ru/spring-mvc/review-mvc-angularjs-bootstrap-html5/">http://javastudy.ru/</a> с материалами по  данному фреймворку. Один из циклов стетей лег в основу проекта. </p>
+                    <p>Текст задания:
                         <br>Создать электронную библиотеку с простейшим web-интерфейсом, позволяющим:
                         <ul>
                             <li>Добавлять информацию о новых книгах через форму</li>
@@ -79,133 +79,9 @@
                         </div>
                     </div>
                 </div>
-                <!--
-                 <div class="col-md-4 text-center">
-                     <div class="thumbnail">
-                         <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                         <div class="caption">
-                             <h3>John Smith<br>
-                                 <small>Job Title</small>
-                             </h3>
-                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
-                             <ul class="list-inline">
-                                 <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                                 </li>
-                                 <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                                 </li>
-                                 <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
-                                 </li>
-                             </ul>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-4 text-center">
-                     <div class="thumbnail">
-                         <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                         <div class="caption">
-                             <h3>John Smith<br>
-                                 <small>Job Title</small>
-                             </h3>
-                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
-                             <ul class="list-inline">
-                                 <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                                 </li>
-                                 <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                                 </li>
-                                 <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
-                                 </li>
-                             </ul>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-4 text-center">
-                     <div class="thumbnail">
-                         <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                         <div class="caption">
-                             <h3>John Smith<br>
-                                 <small>Job Title</small>
-                             </h3>
-                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
-                             <ul class="list-inline">
-                                 <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                                 </li>
-                                 <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                                 </li>
-                                 <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
-                                 </li>
-                             </ul>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-4 text-center">
-                     <div class="thumbnail">
-                         <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                         <div class="caption">
-                             <h3>John Smith<br>
-                                 <small>Job Title</small>
-                             </h3>
-                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
-                             <ul class="list-inline">
-                                 <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                                 </li>
-                                 <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                                 </li>
-                                 <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
-                                 </li>
-                             </ul>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-4 text-center">
-                     <div class="thumbnail">
-                         <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                         <div class="caption">
-                             <h3>John Smith<br>
-                                 <small>Job Title</small>
-                             </h3>
-                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
-                             <ul class="list-inline">
-                                 <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                                 </li>
-                                 <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                                 </li>
-                                 <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
-                                 </li>
-                             </ul>
-                         </div>
-                     </div>
-                 </div>
-                 -->
-             </div>
-             <!-- /.row -->
 
-            <!-- Our Customers -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="page-header">Our Customers</h2>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
             </div>
-            <!-- /.row -->
-
-
+            <hr>
         </div>
         <!-- /.container -->
 

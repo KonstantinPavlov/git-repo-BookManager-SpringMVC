@@ -65,6 +65,11 @@
         <img class="img-responsive img-portfolio img-hover" src='${pageContext.request.contextPath}/resources/images/books.png' alt="">
       </a>
     </div>
+    <div class="col-md-4 col-sm-6">
+      <a href="../about.html">
+        <img class="img-responsive img-portfolio img-hover" src='${pageContext.request.contextPath}/resources/images/about.png' width="60%" height="60%" alt="">
+      </a>
+    </div>
   </div>
   <!-- /.row -->
 
@@ -138,21 +143,6 @@
     </div>
   </div>
   <!-- /.row -->
-
-  <hr>
-
-  <!-- Call to Action Section -->
-  <div class="well">
-    <div class="row">
-      <div class="col-md-8">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-      </div>
-      <div class="col-md-4">
-        <a class="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
-      </div>
-    </div>
-  </div>
-
   <hr>
 
 

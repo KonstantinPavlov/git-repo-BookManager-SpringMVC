@@ -29,6 +29,7 @@
                     </ol>
                 </div>
             </div>
+
             <!-- /.row -->
 
             <!-- BOOK Item Row -->
@@ -49,7 +50,7 @@
                         </div>
                     </div>
             </div>
-
+            <hr>
         </div>
 
 

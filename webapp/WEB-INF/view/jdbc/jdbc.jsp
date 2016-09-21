@@ -31,6 +31,7 @@
                     </ol>
                 </div>
             </div>
+
             <!-- /.row -->
 
             <!-- Content Row -->
@@ -80,7 +81,12 @@
                             </c:forEach>
                     </c:if>
                     <c:if test="${empty books}">
+                        <c:if test="${empty searchText}">
                     <p><em>В коллекцию не добавлено ни одной книги, Добавьте книгу</em></p>
+                        </c:if>
+                        <c:if test="${not empty searchText}">
+                            <p><em>Не найдено ни одной книги удовлетворяющей запросу</em></p>
+                        </c:if>
                     </c:if>
                 </div>
 
@@ -89,7 +95,7 @@
 
             <!-- /.row -->
 
-
+            <hr>
         </div>
         <!-- /.container -->
 
